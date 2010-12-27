@@ -71,6 +71,7 @@ DEPENDENCIES := \
 	examples/04.pdf \
 	examples/05.pdf \
 	examples/06.pdf \
+	examples/07a.pdf \
 	examples/07.pdf \
 	examples/08.pdf \
 	examples/09.pdf \
@@ -99,6 +100,9 @@ distclean: clean
 	@rm -f $(DISTCLEAN)
 
 
+examples/skabelon/doc/project.pdf: 
+	cd examples/skabelon && make default
+
 examples/01.pdf: \
 	examples/01.tex
 	cd examples && pdflatex 01.tex
@@ -116,7 +120,10 @@ examples/01c.pdf: \
 
 examples/02.pdf: \
 	examples/02.tex
+	touch examples/02.toc
+	rm examples/02.toc
 	cd examples && pdflatex 02.tex
+	cp examples/02.pdf examples/02firstRun.pdf
 	cd examples && pdflatex 02.tex
 
 examples/03.pdf: \
@@ -131,13 +138,21 @@ examples/04.pdf: \
 
 examples/05.pdf: \
 	examples/05.tex
+	touch examples/05.aux
+	rm examples/05.aux
 	cd examples && pdflatex 05.tex
+	cp examples/05.pdf examples/05firstRun.pdf
 	cd examples && pdflatex 05.tex
 
 examples/06.pdf: \
 	examples/06.tex
 	cd examples && pdflatex 06.tex
 	cd examples && pdflatex 06.tex
+
+examples/07a.pdf: \
+	examples/07a.tex
+	cd examples && pdflatex 07a.tex
+	cd examples && pdflatex 07a.tex
 
 examples/07.pdf: \
 	examples/07.tex
@@ -146,12 +161,18 @@ examples/07.pdf: \
 
 examples/08.pdf: \
 	examples/08.tex
+	touch examples/08.aux
+	rm examples/08.aux
 	cd examples && pdflatex 08.tex
+	cp examples/08.pdf examples/08firstRun.pdf
 	cd examples && pdflatex 08.tex
 
 examples/09.pdf: \
 	examples/09.tex
+	touch examples/09.aux
+	rm examples/09.aux
 	cd examples && pdflatex 09.tex
+	cp examples/09.pdf examples/09firstRun.pdf
 	cd examples && bibtex 09
 	cd examples && pdflatex 09.tex
 	cd examples && pdflatex 09.tex

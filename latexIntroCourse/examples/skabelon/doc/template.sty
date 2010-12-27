@@ -1,0 +1,152 @@
+\ProvidesPackage{template}
+% Structure package as described in 
+% "The latex companion" page 877.
+% This will enable the use of options, etc.
+
+\usepackage[english, danish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+% Muliggør if then strukturer i latex koden.
+% Benyttes til at generere forsiden.
+\usepackage{ifthen}
+
+
+% ==================================================================
+% ============== Setting up fancy headers ... ======================
+% ==================================================================
+% Holder styr på sidehoved og side fod
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lhead{\korttitel}
+\chead{}
+\rhead{\rightmark}
+\lfoot{\forfattere}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+
+% ==================================================================
+% Sæt parametre for visning af kildekode
+% ==================================================================
+% Gør det muligt at vise kildekode med syntaks 
+% fremhævning i dokumentet.
+\usepackage{listings}
+\lstset{language=TeX, 
+	basicstyle=\footnotesize, 
+	tabsize=4,
+	numbers=left, 
+	numberstyle=\tiny, 
+	stepnumber=1, 
+	numbersep=5pt}
+
+% Gør det muligt at inkludere grafik (bl.a. png og jpg)
+% i dokumentet.
+\usepackage[pdftex]{graphicx}
+
+% Definerer hvordan figur tekster ser ud.
+\usepackage[
+	textfont={rm, it}, 
+	labelfont={bf}]
+	{caption}
+
+% Gør det muligt at medtage flere delfigurer i en enkelt samlet
+% figur.
+\usepackage{subfig}
+
+% Aktiverer todonotes pakken
+\usepackage{todonotes}
+
+% Gør det muligt at følge henvisninger (links) i dokumentet.
+% Beskriver hvordan henvisningerne bliver vist.
+\usepackage[
+	colorlinks=true, 
+	linkcolor=black, 
+	citecolor=black, 
+	urlcolor=black]
+	{hyperref}
+
+% Øg teksthøjden med 2 cm på alle sider
+\addtolength\textheight{2cm}
+\addtolength\topmargin{-1cm}
+\addtolength\marginparwidth{1.5cm}
+\addtolength\headheight{1.6pt}
+
+\makeindex
+% ==================================================================
+% ============== Forskellige makroer som jeg ofte bruger ===========
+% ==================================================================
+\newcommand{\ul}[1]{\underline{#1}}
+\newcommand{\dul}[1]{\underline{\underline{#1}}}
+\newcommand{\celcius}{^{\circ} C}
+\newcommand{\spg}[1]{\noindent \emph{#1}}
+
+\newcommand{\signature}[1]
+	{\noindent\parbox{6cm}{\vspace{2cm}\underline{\hspace{5cm}}\\#1}}
+
+% ==================================================================
+% ============== Various options ===================================
+% ==================================================================
+\numberwithin{equation}{section}
+
+
+\usepackage{tikz}
+
+
+% ==================================================================
+% ============== Indledende oevelser ===============================
+% ==================================================================
+\title{\titel}
+\author{}
+\date{}
+
+
+% ==================================================================
+% ============== Define elements intended to be used ===============
+% ===============first in the document =============================
+% ==================================================================
+\newcommand{\templateforside}{
+	\phantom{g}
+	\vspace{2.5cm}
+	\noindent
+	\begin{Huge}
+	{\titel}
+	\end{Huge}
+	\vspace{11cm}
+
+	\begin{tabular}{@{} l l @{}}
+	\hline
+	Titel           & \titel                \\
+	Udarbejdet af   & \forfattere           
+	\ifthenelse
+		{\equal{\dato}{}}
+		{}
+		{ \\Afleveringsdato  & \dato}
+	\ifthenelse
+		{\equal{\fag}{}}
+		{}
+		{ \\Fag      & \fag}
+	\\
+	\hline
+	\end{tabular}
+	\thispagestyle{empty}
+	\newpage
+}
+
+% ==================================================================
+% ============== Indholds fortegnelse ==============================
+% ==================================================================
+\newcommand{\templatetableofcontents}{
+	\rfoot{\thepage}
+	\setcounter{page}{1}
+	\setcounter{tocdepth}{2}
+	\tableofcontents
+}
+
+\newcommand{\templatelistoftodos}{
+	\listoftodos
+}
