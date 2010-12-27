@@ -1,0 +1,351 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{listings}
+\lstset{language=TeX, 
+	basicstyle=\footnotesize, 
+	tabsize=4,
+	%numbers=left, 
+	numberstyle=\tiny, 
+	stepnumber=2, 
+	numbersep=5pt}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multicol}
+
+\newcommand{\insertPDF}[1]{
+	\includegraphics[trim=4.5cm 0cm 3.5cm 3.5cm, clip, scale=0.8]{#1}}
+
+%\usepackage{beamerthemesplit}
+\usetheme{Goettingen}
+%\usetheme{Bergen}
+%\usetheme{Madrid}
+
+\title{Introduktion til \LaTeX}
+\author{Henrik Skov Midtiby}
+\date{30. april 2008}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Hvorfor \LaTeX{}?}
+\frame{
+\begin{multicols}{2}
+	\tableofcontents[currentsection] 
+\end{multicols} 
+}
+
+
+\subsection{Hvad er \LaTeX{}?}
+\frame {
+\frametitle{Hvad er \LaTeX{}?}
+
+\begin{itemize}
+\item	Et dokument formaterings system
+\item	Baseret på \TeX{} (deraf navnet Lazy \TeX)
+\item 	Udviklet af Leslie Lamport i 1983 
+\end{itemize}
+}
+
+\newcommand{\hsmcomment}[1]{}
+%\hsmcomment{
+
+\subsection{Fordele og ulemper ved \LaTeX{}}
+\frame
+{
+  \frametitle{Fordele og ulemper}
+  Fordele ved \LaTeX{}
+  \begin{itemize}
+	\item Separation af indhold og udseende
+	\item Godt grafisk udseende
+	\item Håndtering af store dokumenter
+	\item Dokument samarbejde
+  \end{itemize}
+
+  Ulemper ved \LaTeX{}
+  \begin{itemize}
+	\item Svært at komme igang (stejl indlæringskurve)
+  \end{itemize}
+}
+
+\frame{
+	\centering
+\begin{tikzpicture}
+%\draw[step=0.2cm] (0, 0) grid (4, 4);
+%\draw node[anchor=south west, xshift=-0.87cm, yshift=-0.88cm, opacity=0.5] {\includegraphics[width=8cm]{learningcurve.jpg}};
+\draw[->] (0, 0) -- (0, 5) node[right] {Effort};
+\draw[->] (0, 0) -- (6, 0) node[above left] {Document complexity};
+\draw[thick, red] (0, 0.65) .. controls +(10: 1.6cm) and +(270: 3cm) .. (2.6, 5.3);
+\draw[thick, blue] (0, 1.2) .. controls +(80: 0.6cm) and +(185: 3cm) .. (5.5, 2.30);
+\draw (0, 0.8) node[left, scale=0.6] {Easy};
+\draw (0, 2.5) node[left, scale=0.6] {Moderate};
+\draw (0, 4.0) node[left, scale=0.6] {Nearly impossible};
+\draw (0.7, 0) node[below=0.2cm, scale=0.6] {Very simple};
+\draw (2.6, 0) node[below=0.2cm, scale=0.6] {Somewhat complex};
+\draw (4.7, 0) node[below=0.2cm, scale=0.6] {Extremely complex};
+\draw[thick, blue] (5, 4) -- (5.5, 4) node[right] {\LaTeX};
+\draw[thick, red] (5, 3.5) -- (5.5, 3.5) node[right] {MS Word};
+\end{tikzpicture}
+}
+
+
+\subsection{Programmer}
+\frame
+{
+	\frametitle{Hvilke programmer skal jeg bruge?}
+	Oversættere (oversætter et latex dokument til f.eks. en pdf fil)
+	\begin{itemize}
+		\item MikTeX, \url{http://miktex.org/2.7/Setup.aspx}
+	\end{itemize}
+
+	Editorer (det program du bruger til at rette i latex dokumenter)
+	\begin{itemize}
+		\item	TexnicCenter, \url{http://www.toolscenter.org/downloads.html}
+		\item 	Texmaker, \url{http://www.xm1math.net/texmaker/download.html}
+\end{itemize}
+}
+
+
+
+
+\section{Eksempler 1}
+\frame{
+\begin{multicols}{2}
+	\tableofcontents[currentsection] 
+\end{multicols} 
+}
+
+\subsection{Minimalt eksempel}
+\frame
+{
+	\frametitle{Minimalt eksempel}
+	\lstinputlisting{examples/01.tex}
+}
+
+\frame
+{
+	\insertPDF{examples/01.pdf}
+}
+
+
+\subsection{Danske tegn}
+\begin{frame}[fragile]
+	\frametitle{Danske tegn -- Problemer}
+
+\begin{verbatim}
+\documentclass{article}
+\begin{document}
+Hello world!
+æøå
+\end{document}
+\end{verbatim}
+
+\end{frame}
+\frame
+{
+	\insertPDF{examples/01b.pdf}
+}
+
+
+\begin{frame}[fragile]
+	\frametitle{Danske tegn -- Problemet løst}
+
+\begin{verbatim}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\begin{document}
+Hello world!
+æøå
+\end{document}
+\end{verbatim}
+
+\end{frame}
+\frame
+{
+	\insertPDF{examples/01c.pdf}
+}
+
+
+
+
+
+
+
+\subsection{Indholdsfortegnelse}
+\frame
+{
+	\frametitle{Indholdsfortegnelse}
+	\lstinputlisting{examples/02.tex}
+}
+
+\frame
+{
+	\insertPDF{examples/02.pdf}
+}
+
+% Der er problemer med at indsætte æøå vha. listingspakken
+%\frame
+%{
+%	\frametitle{ÆØÅ problemer}
+%	\lstinputlisting[extendedchars]{examples/03.tex}
+%}
+%
+%\frame
+%{
+%	\insertPDF{examples/03.pdf}
+%}
+
+\subsection{Lister}
+\frame {
+	\frametitle{Lister}
+	\lstinputlisting[firstline=5, lastline=18]{examples/04.tex}
+}
+
+\frame {
+	\insertPDF{examples/04.pdf}
+}
+
+\section{Eksempler 2}
+\frame{
+\begin{multicols}{2}
+	\tableofcontents[currentsection] 
+\end{multicols} 
+}
+
+\subsection{Referencer}
+\frame {
+	\frametitle{Referencer}
+	\lstinputlisting[firstline=4, lastline=18]{examples/05.tex}
+}
+
+\frame {
+	\insertPDF{examples/05.pdf}
+}
+
+
+\subsection{Tabeller}
+\frame {
+	\frametitle{Tabeller}
+	\lstinputlisting{examples/10.tex}
+}
+
+\frame {
+	\insertPDF{examples/10.pdf}
+}
+
+
+\subsection{Figurer}
+\frame {
+	\frametitle{Figurer}
+	\lstinputlisting{examples/06.tex}
+}
+
+\frame {
+	\insertPDF{examples/06.pdf}
+}
+
+
+\frame{
+	\frametitle{Ide til en mappestruktur}
+	
+	Mappe struktur for et lille latex dokument (alt i den samme mappe)
+	\begin{itemize}
+		\item	project.tex
+		\item	vandstraaler.jpg
+	\end{itemize}
+
+	Min mappe struktur for et latex dokument (undermapper til billeder m.m.)
+	\begin{itemize}
+		\item	project.tex
+		\item	pic/vandstraaler.jpg
+	\end{itemize}
+
+}
+
+
+\subsection{Formler}
+\frame {
+	\frametitle{Formler}
+	\lstinputlisting{examples/07.tex}
+}
+
+\frame {
+	\insertPDF{examples/07.pdf}
+}
+
+\section{Eksempler 3}
+\frame{
+\begin{multicols}{2}
+	\tableofcontents[currentsection] 
+\end{multicols} 
+}
+
+\subsection{Cite and bibitem}
+\frame {
+	\frametitle{Cite and bibitem}
+	\lstinputlisting[firstline=4, lastline=20]{examples/08.tex}
+}
+
+\frame {
+	\insertPDF{examples/08.pdf}
+}
+
+%}
+
+
+\subsection{Bibtex}
+\frame {
+	\frametitle{Bibtex I}
+	\lstinputlisting{examples/09.tex}
+}
+
+\frame {
+	\frametitle{Bibtex II}
+	\lstinputlisting{examples/bibtexfile.bib}
+}
+
+\frame {
+	\insertPDF{examples/09.pdf}
+}
+
+\section{En rapport skabelon}
+\frame {
+	\frametitle{Rapport skabelon}
+	\lstinputlisting[firstline=1, lastline=14]{examples/skabelon/doc/project.tex}
+}
+
+{
+% The following line is needed to avoid beamer 
+% placing a white background on top of the other contents
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={1, 2, 3, 4}, nup=2x1, frame, delta=0.5cm 0.5cm, scale=0.9]
+	{examples/skabelon/doc/project.pdf}
+}
+
+\section{Ressourcer}
+\frame {
+\begin{itemize}
+\item	Skabeloner
+	\begin{itemize}
+	\item	Midtiby notes (min blog) 				\\
+	\url{http://midtiby.blogspot.com/2008/04/introduktionkursus-til-latex.html}
+	\end{itemize}
+\item	Læsestof
+	\begin{itemize}
+	\item	The not so short introduction to latex 	\\
+			\url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}
+	\item	Bog om latex på wikibooks 				\\
+			\url{http://en.wikibooks.org/wiki/LaTeX}
+	\item	The \LaTeX{} companion					\\
+			Meget grundig bog om latex
+	\end{itemize}
+
+\end{itemize}
+}
+
+
+
+\end{document}
