@@ -9,3 +9,7 @@
 *.snm
 *.vrb
 *.synctex.gz
+*.tdo
+*.idx
+*.swp
+latexIntroCourse/errorfile

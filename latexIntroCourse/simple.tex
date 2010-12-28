@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{listings}
-\lstset{language=TeX, 
+\lstset{% language=TeX, 
 	basicstyle=\footnotesize, 
 	tabsize=4,
 	%numbers=left, 
@@ -30,6 +30,8 @@
 
 \frame{\titlepage}
 
+% ================================================================
+% ================================================================
 \section{Hvorfor \LaTeX{}?}
 \frame{
 \begin{multicols}{2}
@@ -38,6 +40,7 @@
 }
 
 
+% ================================================================
 \subsection{Hvad er \LaTeX{}?}
 \frame {
 \frametitle{Hvad er \LaTeX{}?}
@@ -52,7 +55,8 @@
 \newcommand{\hsmcomment}[1]{}
 %\hsmcomment{
 
-\subsection{Fordele og ulemper ved \LaTeX{}}
+% ================================================================
+\subsection{Fordele og ulemper}
 \frame
 {
   \frametitle{Fordele og ulemper}
@@ -87,10 +91,13 @@
 \draw (4.7, 0) node[below=0.2cm, scale=0.6] {Extremely complex};
 \draw[thick, blue] (5, 4) -- (5.5, 4) node[right] {\LaTeX};
 \draw[thick, red] (5, 3.5) -- (5.5, 3.5) node[right] {MS Word};
+\draw (0, -1) node[right] {\tiny\url{http://www2.ihis.aau.dk/~trautner/car-phds.html}};
 \end{tikzpicture}
+
 }
 
 
+% ================================================================
 \subsection{Programmer}
 \frame
 {
@@ -110,6 +117,8 @@
 
 
 
+% ================================================================
+% ================================================================
 \section{Eksempler 1}
 \frame{
 \begin{multicols}{2}
@@ -117,6 +126,7 @@
 \end{multicols} 
 }
 
+% ================================================================
 \subsection{Minimalt eksempel}
 \frame
 {
@@ -130,6 +140,7 @@
 }
 
 
+% ================================================================
 \subsection{Danske tegn}
 \begin{frame}[fragile]
 	\frametitle{Danske tegn -- Problemer}
@@ -173,6 +184,7 @@ Hello world!
 
 
 
+% ================================================================
 \subsection{Indholdsfortegnelse}
 \frame
 {
@@ -202,6 +214,7 @@ Hello world!
 %	\insertPDF{examples/03.pdf}
 %}
 
+% ================================================================
 \subsection{Referencer}
 \frame {
 	\frametitle{Referencer}
@@ -217,6 +230,7 @@ Hello world!
 }
 
 
+% ================================================================
 \subsection{Kommando anatomi}
 \frame {
 	\frametitle{Kommando anatomi}
@@ -227,6 +241,8 @@ Hello world!
 }
 
 
+% ================================================================
+% ================================================================
 \section{Eksempler 2}
 \frame{
 \begin{multicols}{2}
@@ -234,6 +250,7 @@ Hello world!
 \end{multicols} 
 }
 
+% ================================================================
 \subsection{Lister}
 \frame {
 	\frametitle{Lister}
@@ -244,6 +261,7 @@ Hello world!
 	\insertPDF{examples/04.pdf}
 }
 
+% ================================================================
 \subsection{Tabeller}
 \frame {
 	\frametitle{Tabeller}
@@ -255,6 +273,7 @@ Hello world!
 }
 
 
+% ================================================================
 \subsection{Figurer}
 \frame {
 	\frametitle{Figurer}
@@ -281,6 +300,7 @@ Hello world!
 }
 
 
+% ================================================================
 \subsection{Formler}
 \frame {
 	\frametitle{Formler I}
@@ -289,6 +309,18 @@ Hello world!
 
 \frame {
 	\insertPDF{examples/07a.pdf}
+}
+
+
+\frame {
+	\frametitle{Hvor finder man symbolerne?}
+
+	\begin{itemize}
+	\item Detixify, 
+			\url{http://detexify.kirelabs.org/classify.html}
+	\item The Comprehensive LaTeX Symbol List, 
+			\url{http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-a4.pdf}
+	\end{itemize}
 }
 
 
@@ -304,7 +336,8 @@ Hello world!
 
 
 
-\subsection[Miljø anatomi]{Miljø (environment) anatomi}
+% ================================================================
+\subsection{Miljø anatomi}
 \frame {
 	\frametitle{Miljø (environment) anatomi}
 	Generel opbygning
@@ -317,7 +350,8 @@ Hello world!
 
 
 
-
+% ================================================================
+% ================================================================
 \section{Eksempler 3}
 \frame{
 \begin{multicols}{2}
@@ -325,6 +359,7 @@ Hello world!
 \end{multicols} 
 }
 
+% ================================================================
 \subsection{Cite and bibitem}
 \frame {
 	\frametitle{Cite and bibitem}
@@ -342,6 +377,7 @@ Hello world!
 %}
 
 
+% ================================================================
 \subsection{Bibtex}
 \frame {
 	\frametitle{Bibtex I}
@@ -361,6 +397,20 @@ Hello world!
 	\insertPDF{examples/09.pdf}
 }
 
+
+\frame
+{
+	\frametitle{Programmer}
+
+	\begin{itemize}
+		\item	Jabref, \url{http://jabref.sourceforge.net/}
+	\end{itemize}
+}
+
+
+
+% ================================================================
+% ================================================================
 \section{En rapport skabelon}
 \frame {
 	\frametitle{Rapport skabelon}
@@ -375,6 +425,9 @@ Hello world!
 	{examples/skabelon/doc/project.pdf}
 }
 
+
+% ================================================================
+% ================================================================
 \section{Ressourcer}
 \frame {
 \begin{itemize}
@@ -387,6 +440,8 @@ Hello world!
 	\begin{itemize}
 	\item	The not so short introduction to latex 	\\
 			\url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}
+	\item	Introduktion til \LaTeX 				\\
+			\url{http://imf.au.dk/system/latex/bog/}
 	\item	Bog om latex på wikibooks 				\\
 			\url{http://en.wikibooks.org/wiki/LaTeX}
 	\item	The \LaTeX{} companion					\\
