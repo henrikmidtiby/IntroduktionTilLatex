@@ -118,6 +118,8 @@ gøres i latex.
 Der er eksempler på hvordan man indsætter en figur, noget kildekode
 og meget mere \ldots
 
+
+
 \section{Lister}
 
 Latex kan formatere tekst på mange forskellige måder. 
@@ -156,6 +158,42 @@ Koden til det ovenstående er
 	\item[Abe:]	Et dyr
 \end{description}
 \end{lstlisting}
+
+
+
+
+
+\section{Billeder og figurer}
+
+Billeder indsættes i latex med \verb!\includegraphics! kommandoen.
+Ofte ønsker man at angive hvor stort billedet skal være, det gøres 
+med \verb!width! og \verb!height! options.
+
+\includegraphics[width=5cm]{pic/figur.png}
+\begin{verbatim}
+\includegraphics[width=5cm]{pic/figur.png}
+\end{verbatim}
+
+Typisk indsættes billeder i et \verb!figure! miljø med tilhørende 
+figurnummber og tekst.
+Figur \ref{figLabel} er lavet med nedenstående kode:
+
+\begin{verbatim}
+\begin{figure}
+\centering
+\includegraphics[width=7cm]{pic/figur.png}
+\caption{En figurtekst.}
+\label{figLabel}
+\end{figure}
+\end{verbatim}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=7cm]{pic/figur.png}
+\caption{En figurtekst.}
+\label{figLabel}
+\end{figure}
 
 
 
