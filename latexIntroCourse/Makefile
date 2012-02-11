@@ -78,6 +78,7 @@ DEPENDENCIES := \
 	examples/09.pdf \
 	examples/10.pdf \
 	examples/11.pdf \
+	examples/12.pdf \
 	examples/skabelon/doc/project.pdf \
 
 ${PROJEKTNAVN}.pdf: \
@@ -193,6 +194,11 @@ examples/11.pdf: \
 	examples/11.tex
 	cd examples && pdflatex 11.tex
 	cd examples && pdflatex 11.tex
+
+examples/12.pdf: \
+	examples/12.tex
+	cd examples && pdflatex 12.tex
+	cd examples && pdflatex 12.tex
 
 examples/skabelon/doc/project.pdf:
 	cd examples/skabelon && make 
