@@ -69,6 +69,7 @@ DEPENDENCIES := \
 	examples/02.pdf \
 	examples/03.pdf \
 	examples/04.pdf \
+	examples/04b.pdf \
 	examples/05.pdf \
 	examples/06.pdf \
 	examples/07a.pdf \
@@ -135,6 +136,11 @@ examples/04.pdf: \
 	examples/04.tex
 	cd examples && pdflatex 04.tex
 	cd examples && pdflatex 04.tex
+
+examples/04b.pdf: \
+	examples/04b.tex
+	cd examples && pdflatex 04b.tex
+	cd examples && pdflatex 04b.tex
 
 examples/05.pdf: \
 	examples/05.tex
