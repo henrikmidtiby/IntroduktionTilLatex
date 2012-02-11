@@ -14,8 +14,8 @@
 \usepackage{tikz}
 \usepackage{multicol}
 
-\newcommand{\insertPDF}[1]{
-	\includegraphics[trim=4.5cm 0cm 3.5cm 3.5cm, clip, scale=0.8]{#1}}
+\newcommand{\insertPDF}[2][0.8]{
+	\includegraphics[trim=4.5cm 0cm 0cm 3.5cm, clip, scale=#1]{#2}}
 
 %\usepackage{beamerthemesplit}
 \usetheme{Goettingen}
@@ -469,6 +469,21 @@ På Ærø ligger Marstal.
 			{\tiny \url{http://jabref.sourceforge.net/}}
 	\end{itemize}
 }
+
+
+% ================================================================
+\subsection{Todonotes}
+
+\frame {
+	\frametitle{Tabeller}
+	\lstinputlisting[firstline=2, lastline=2, basicstyle=\color{red}]{examples/11.tex}
+	\lstinputlisting[firstline=5, lastline=15]{examples/11.tex}
+}
+
+\frame {
+	\insertPDF[0.6]{examples/11.pdf}
+}
+
 
 
 
