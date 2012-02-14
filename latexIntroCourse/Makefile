@@ -10,47 +10,13 @@ CLEAN := \
 	${PROJEKTNAVN}.snm \
 	${PROJEKTNAVN}.bbl \
 	${PROJEKTNAVN}.blg \
-	examples/08.bbl \
-	examples/09.bbl \
-	examples/08.blg \
-	examples/09.blg \
-	examples/02.toc \
-	examples/01.log \
-	examples/01b.log \
-	examples/01c.log \
-	examples/02.log \
-	examples/03.log \
-	examples/04.log \
-	examples/05.log \
-	examples/06.log \
-	examples/07.log \
-	examples/08.log \
-	examples/09.log \
-	examples/10.log \
-	examples/01.aux \
-	examples/01b.aux \
-	examples/01c.aux \
-	examples/02.aux \
-	examples/03.aux \
-	examples/04.aux \
-	examples/05.aux \
-	examples/06.aux \
-	examples/07.aux \
-	examples/08.aux \
-	examples/09.aux \
-	examples/10.aux \
-	examples/01.pdf \
-	examples/01b.pdf \
-	examples/01c.pdf \
-	examples/02.pdf \
-	examples/03.pdf \
-	examples/04.pdf \
-	examples/05.pdf \
-	examples/06.pdf \
-	examples/07.pdf \
-	examples/08.pdf \
-	examples/09.pdf \
-	examples/10.pdf \
+	examples/*.bbl \
+	examples/*.blg \
+	examples/*.toc \
+	examples/*.log \
+	examples/*.aux \
+	examples/*.tdo \
+	examples/*.pdf \
 	examples/skabelon/doc/project.aux \
 	examples/skabelon/doc/project.log \
 	examples/skabelon/doc/project.idx \
@@ -200,5 +166,3 @@ examples/12.pdf: \
 	cd examples && pdflatex 12.tex
 	cd examples && pdflatex 12.tex
 
-examples/skabelon/doc/project.pdf:
-	cd examples/skabelon && make 
