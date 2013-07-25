@@ -13,6 +13,7 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{multicol}
+\usepackage{dirtree}
 
 \newcommand{\insertPDF}[2][0.8]{
 	\includegraphics[trim=4.5cm 0cm 0cm 3.5cm, clip, scale=#1]{#2}}
@@ -537,6 +538,13 @@ På Ærø ligger Marstal.
 % ================================================================
 % ================================================================
 \section{En rapport skabelon}
+\frame{
+\begin{multicols}{2}
+	\tableofcontents[currentsection] 
+\end{multicols} 
+}
+
+
 %\frame {
 %	\frametitle{Rapport skabelon}
 %	\lstinputlisting[firstline=1, lastline=14]{examples/skabelon/doc/project.tex}
@@ -548,6 +556,25 @@ På Ærø ligger Marstal.
 \setbeamercolor{background canvas}{bg=}
 \includepdf[pages={1, 2, 3, 4, 5, 6}, nup=2x1, frame, delta=0.5cm 0.5cm, scale=0.9]
 	{examples/skabelon/doc/project.pdf}
+}
+
+\frame{
+\dirtree{%
+.1 IntroduktionTilLatex.
+.2 latexIntroCourse.
+.3 Examples.
+.4 skabelon.
+.4 01.tex.
+.4 02.tex.
+.4 ....
+.3 pic.
+.3 simple.pdf.
+.3 simple.tex.
+.2 errors.
+.3 test001.tex.
+.3 test002.tex.
+.3 ....
+}
 }
 
 
