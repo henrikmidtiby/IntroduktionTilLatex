@@ -17,6 +17,14 @@
 \newcommand{\insertPDF}[2][0.8]{
 	\includegraphics[trim=4.5cm 0cm 0cm 3.5cm, clip, scale=#1]{#2}}
 
+\newcommand{\addnote}[1]{
+\pause
+\begin{tikzpicture}[remember picture, overlay]
+\draw (current page.center) ++ (0, -4) node[above, fill=orange, text width=7cm] {#1};
+\end{tikzpicture}
+}
+
+
 %\usepackage{beamerthemesplit}
 \usetheme{Goettingen}
 %\usetheme{Bergen}
@@ -235,6 +243,7 @@ På Ærø ligger Marstal.
 \frame
 {
 	\insertPDF{examples/02firstRun.pdf}
+	\addnote{For at opdatere indholdet i indholdsfortegnelsen er det nødvendigt at oversætte filen to gange.}
 }
 
 \frame
@@ -263,6 +272,7 @@ På Ærø ligger Marstal.
 
 \frame {
 	\insertPDF{examples/05firstRun.pdf}
+	\addnote{Henvisninger til referencer kræver også to oversættelser.}
 }
 
 \frame {
