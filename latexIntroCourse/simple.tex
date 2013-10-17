@@ -33,7 +33,7 @@
 
 \title{\LaTeX{} kursus}
 \author{Henrik Skov Midtiby}
-\date{28. februar 2012}
+\date{22. oktober 2013}
 
 \begin{document}
 
@@ -50,6 +50,24 @@
 \end{itemize}
 }
 
+\frame{
+\dirtree{%
+.1 IntroduktionTilLatex.
+.2 latexIntroCourse.
+.3 Examples.
+.4 skabelon.
+.4 01.tex.
+.4 02.tex.
+.4 ....
+.3 pic.
+.3 simple.pdf.
+.3 simple.tex.
+.2 errors.
+.3 test001.tex.
+.3 test002.tex.
+.3 ....
+}
+}
 
 
 % ================================================================
@@ -232,6 +250,18 @@ På Ærø ligger Marstal.
 
 
 
+% ================================================================
+\subsection{Afsnit}
+\frame
+{
+	\frametitle{Afsnit}
+	\lstinputlisting{examples/02paragraphs.tex}
+}
+
+\frame
+{
+	\insertPDF{examples/02paragraphs.pdf}
+}
 
 % ================================================================
 \subsection{Indholdsfortegnelse}
@@ -364,6 +394,22 @@ På Ærø ligger Marstal.
 
 % ================================================================
 \subsection{Formler}
+\begin{frame}[fragile]
+	\frametitle{Formler 0}
+	{\Huge
+	\begin{align*}
+		\frac{a}{b}	\qquad a^b	\qquad \theta
+	\end{align*}
+	}
+	\pause
+	\begin{verbatim}
+\frac{a}{b}
+a^b
+\theta
+	\end{verbatim}
+\end{frame}
+
+
 \frame {
 	\frametitle{Formler I}
 	\lstinputlisting[firstline=2, lastline=2, basicstyle=\color{red}]{examples/07a.tex}
@@ -387,6 +433,18 @@ På Ærø ligger Marstal.
 	
 	\centering	
 	\includegraphics[width=7cm]{pic/detexify.png}
+}
+
+\frame {
+	\frametitle{Tegn formlerne!}
+
+	\begin{itemize}
+	\item MyScript MathPad, \\
+			{\tiny \url{https://itunes.apple.com/app/myscript-mathpad/id674996719}}
+	\end{itemize}
+	
+	\centering	
+	\includegraphics[width=7cm]{pic/myscriptmathpad.jpg}
 }
 
 
@@ -574,6 +632,23 @@ På Ærø ligger Marstal.
 }
 
 
+% ================================================================
+\subsection{include / input}
+
+\frame {
+	\frametitle{include / input}
+	16include.tex
+	\lstinputlisting[firstline=1, lastline=4, basicstyle=\footnotesize]{examples/16include.tex}
+	
+	\vspace{1cm}
+	16includePartA.tex
+	\lstinputlisting[firstline=1, lastline=2, basicstyle=\footnotesize]{examples/16includePartA.tex}
+}
+
+\frame {
+	\insertPDF[0.6]{examples/16include.pdf}
+}
+
 
 % ================================================================
 % ================================================================
@@ -598,24 +673,6 @@ På Ærø ligger Marstal.
 	{examples/skabelon/doc/project.pdf}
 }
 
-\frame{
-\dirtree{%
-.1 IntroduktionTilLatex.
-.2 latexIntroCourse.
-.3 Examples.
-.4 skabelon.
-.4 01.tex.
-.4 02.tex.
-.4 ....
-.3 pic.
-.3 simple.pdf.
-.3 simple.tex.
-.2 errors.
-.3 test001.tex.
-.3 test002.tex.
-.3 ....
-}
-}
 
 
 % ================================================================

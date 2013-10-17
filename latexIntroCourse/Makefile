@@ -33,6 +33,7 @@ DEPENDENCIES := \
 	examples/01b.pdf \
 	examples/01c.pdf \
 	examples/02.pdf \
+	examples/02paragraphs.pdf \
 	examples/03.pdf \
 	examples/04.pdf \
 	examples/04b.pdf \
@@ -45,6 +46,10 @@ DEPENDENCIES := \
 	examples/10.pdf \
 	examples/11.pdf \
 	examples/12.pdf \
+	examples/13mhchem.pdf \
+	examples/14siunitx.pdf \
+	examples/15hyperref.pdf \
+	examples/16include.pdf \
 	examples/skabelon/doc/project.pdf \
 
 ${PROJEKTNAVN}.pdf: \
@@ -94,6 +99,10 @@ examples/02.pdf: \
 	cd examples && pdflatex 02.tex
 	cp examples/02.pdf examples/02firstRun.pdf
 	cd examples && pdflatex 02.tex
+
+examples/02paragraphs.pdf: \
+	examples/02paragraphs.tex
+	cd examples && pdflatex 02paragraphs.tex
 
 examples/03.pdf: \
 	examples/03.tex
@@ -165,4 +174,20 @@ examples/12.pdf: \
 	examples/12.tex
 	cd examples && pdflatex 12.tex
 	cd examples && pdflatex 12.tex
+
+examples/13mhchem.pdf: \
+	examples/13mhchem.tex
+	cd examples && pdflatex 13mhchem.tex
+
+examples/14siunitx.pdf: \
+	examples/14siunitx.tex
+	cd examples && pdflatex 14siunitx.tex
+
+examples/15hyperref.pdf: \
+	examples/15hyperref.tex
+	cd examples && pdflatex 15hyperref.tex
+
+examples/16include.pdf: \
+	examples/16include.tex
+	cd examples && pdflatex 16include.tex
 
