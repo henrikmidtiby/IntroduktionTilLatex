@@ -12,6 +12,7 @@
 \usepackage{pdfpages}
 \usepackage{graphicx}
 \usepackage{tikz}
+\usetikzlibrary{external}
 \usepackage{multicol}
 \usepackage{dirtree}
 
@@ -23,6 +24,14 @@
 \begin{tikzpicture}[remember picture, overlay]
 \draw (current page.center) ++ (0, -4) node[above, fill=orange, text width=7cm] {#1};
 \end{tikzpicture}
+}
+
+\newcommand{\source}[1]{
+\tikzexternaldisable
+\begin{tikzpicture}[remember picture, overlay]
+\draw (current page.south west) ++ (0.25, 0.40) node[above right]{\footnotesize #1};
+\end{tikzpicture}
+\tikzexternalenable
 }
 
 
