@@ -1,6 +1,5 @@
 *.aux
 *.log
-*.pdf
 *.toc
 *.bbl
 *.blg
@@ -13,3 +12,6 @@
 *.idx
 *.swp
 latexIntroCourse/errorfile
+latexIntroCourse/examples/*.pdf
+latexIntroCourse/simple.pdf
+latexIntroCourse/examples/skabelon/doc/project.pdf
