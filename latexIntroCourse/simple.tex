@@ -42,7 +42,7 @@
 
 \title{\LaTeX{} kursus}
 \author{Henrik Skov Midtiby}
-\date{22. oktober 2013}
+\date{}
 
 \begin{document}
 
@@ -53,7 +53,8 @@
 \begin{itemize}
 \item Afprøve om der er internet adgang
 \item Hente præsentationen, \\
-	{\tiny \url{http://odense.unf.dk/downloads/2012-02-28Latexkursus.zip}}
+	{\tiny \url{http://tinyurl.com/p84zbx2}}
+%	{\tiny \url{http://odense.unf.dk/downloads/2012-02-28Latexkursus.zip}}
 \item Hente og installere miktex, \\
 	{\tiny \url{http://miktex.org/2.9/setup}}
 \end{itemize}
@@ -188,7 +189,7 @@
 \frame
 {
 \frametitle{TeXworks}
-	\includegraphics[height=5cm]{pic/texworksLatexErrors.png}
+	\includegraphics[height=6cm]{pic/texworksLatexErrors.png}
 }
 
 % ================================================================
@@ -532,6 +533,8 @@ a^b
 
 % ================================================================
 \subsection{Bibtex}
+
+
 \frame {
 	\frametitle{Bibtex I}
 	\lstinputlisting{examples/09.tex}
@@ -637,6 +640,10 @@ a^b
 }
 
 \frame {
+	\insertPDF[0.6]{examples/15hyperreffirstRun.pdf}
+}
+
+\frame {
 	\insertPDF[0.6]{examples/15hyperref.pdf}
 }
 
@@ -686,15 +693,8 @@ a^b
 
 % ================================================================
 % ================================================================
-\section{Ressourcer}
+\section{Ressourcer / Læsestof}
 \frame {
-\begin{itemize}
-\item	Skabeloner
-	\begin{itemize}
-	\item	Midtiby notes (min blog) 				\\
-		{\tiny \url{http://midtiby.blogspot.com/2008/04/introduktionkursus-til-latex.html}}
-	\end{itemize}
-\item	Læsestof
 	\begin{itemize}
 	\item	The not so short introduction to latex 	\\
 			{\tiny \url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}}
@@ -707,14 +707,13 @@ a^b
 	\item	The \LaTeX{} companion					\\
 			Meget grundig bog om latex
 	\end{itemize}
-
-\end{itemize}
 }
 
 
 \frame{
-	\frametitle{Andet}
-	Slette .aux filer
+	\frametitle{Andre tips}
+	Hvis latex kompileringen fejler kan problemet nogle gange løses ved at slette
+	alle \emph{.aux} filer.
 }
 
 
