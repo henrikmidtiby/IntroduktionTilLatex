@@ -185,6 +185,10 @@ examples/14siunitx.pdf: \
 
 examples/15hyperref.pdf: \
 	examples/15hyperref.tex
+	touch examples/15hyperref.aux
+	rm examples/15hyperref.aux
+	cd examples && pdflatex 15hyperref.tex
+	cp examples/15hyperref.pdf examples/15hyperreffirstRun.pdf
 	cd examples && pdflatex 15hyperref.tex
 
 examples/16include.pdf: \
