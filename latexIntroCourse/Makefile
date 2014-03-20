@@ -179,6 +179,10 @@ examples/13mhchem.pdf: \
 	examples/13mhchem.tex
 	cd examples && pdflatex 13mhchem.tex
 
+examples/13mhchemReactions.pdf: \
+	examples/13mhchemReactions.tex
+	cd examples && pdflatex 13mhchemReactions.tex
+
 examples/14siunitx.pdf: \
 	examples/14siunitx.tex
 	cd examples && pdflatex 14siunitx.tex
