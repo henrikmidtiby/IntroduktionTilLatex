@@ -1,16 +1,78 @@
 \documentclass[11pt,a4paper,fleqn]{article}
-\usepackage{template}
+% Sørger for at prædefinerede tekster står på dansk.
+\usepackage[danish]{babel}
+
+% Håndter æøå.
+\usepackage[utf8]{inputenc}
+
+% Opstil ligninger med align miljøet
+\usepackage{amsmath}
+
+% Øg teksthøjden med 2 cm på alle sider
+\usepackage[margin=4cm, marginparwidth=3cm]{geometry}
+
+% Definerer indholdet af sidehoved og sidefod.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Latex rodebunke}
+\chead{}
+\rhead{\rightmark}
+\lfoot{Henrik Skov Midtiby}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% Gør det muligt at vise kildekode med syntaks 
+% fremhævning i dokumentet.
+\usepackage{listings}
+\lstset{language=TeX, 
+	basicstyle=\footnotesize, 
+	tabsize=4,
+	numbers=left, 
+	numberstyle=\tiny, 
+	stepnumber=1, 
+	numbersep=5pt}
+
+% Gør det muligt at inkludere grafik (bl.a. png og jpg)
+% i dokumentet.
+\usepackage{graphicx}
+
+% Definerer hvordan figur tekster ser ud.
+\usepackage[
+	textfont={rm, it}, 
+	labelfont={bf}]
+	{caption}
+
+% Aktiverer todonotes pakken
+\usepackage{todonotes}
+
+% Gør det muligt at følge henvisninger (links) i dokumentet.
+% Beskriver hvordan henvisningerne bliver vist.
+\usepackage[
+	colorlinks=true, 
+	linkcolor=black, 
+	citecolor=black, 
+	urlcolor=black]
+	{hyperref}
+
+% Korrigerer hvor hyperref hopper hen ved links til figurer.
 \usepackage[all]{hypcap}
 
-\newcommand{\forfattere}{Henrik Skov Midtiby}
-\newcommand{\titel}{Latex rodebunke med forklaringer}
-\newcommand{\korttitel}{Latex rodebunke}
-\newcommand{\dato}{2007-12-24}
-\newcommand{\fag}{DM63}
+% Sørg for at formler nummereres inden for hvert afsnit.
+\numberwithin{equation}{section}
+
+% Aktiverer tegne funktionaliteten i tikz / pgf.
+\usepackage{tikz}
+
+\author{Henrik Skov Midtiby}
+\title{Latex rodebunke med forklaringer}
+\date{2014-03-20}
 
 \begin{document}
-\templateforside
-\templatetableofcontents
+\maketitle
+\newpage
+\tableofcontents
 \listoftodos
 \newpage
 
@@ -23,7 +85,7 @@
 I dette dokument vises det hvordan en række forskellige ting kan
 gøres i latex. 
 \todo{Man kan også indsætte kommentarer i margen om ting der skal 
-ændres / forbedres / tjekkes senere.}%
+ændres / forbedres / tjekkes senere.}
 Der er eksempler på hvordan man indsætter en figur, noget kildekode
 og meget mere \ldots
 
@@ -48,8 +110,9 @@ Hvilket givet nedenstående resultat
 	\item Pindsvin
 \end{itemize}
 %
-Ønsker man en nummereret liste benyttes \emph{enumerate} i stedet for \emph{itemize}.
-\todo{Eksempel med lister i lister.}%
+Ønsker man en nummereret liste benyttes \emph{enumerate} 
+i stedet for \emph{itemize}.
+\todo{Eksempel med lister i lister.}
 Desuden er det muligt at beskrive en række ting
 %
 \begin{description}
@@ -165,7 +228,6 @@ samling af eksempler på hvad PGF / TikZ kan præstere.
 
 I preamble kan man indstille hvordan figur tekster skal se ud i
 dokumentet.
-\todo{En ting jeg gerne vil have ændret i dokumentet.}%
 Det gøres ved at inkludere pakken \verb!caption! og give den en
 række argumenter.
 F.eks. giver følgende figur tekster hvor figur nummeret står med en
@@ -183,7 +245,7 @@ kursiv.
 
 Når pakken \verb!hyperref! inkluderes i preamblet vil latex lave
 henvisninger i dokumentet om til links, som læseren kan følge når
-\todo{Noget der skal ændres i dokumentet.}%
+\todo{Noget der skal ændres i dokumentet.}
 dokumentet læses.
 %
 \begin{lstlisting}
@@ -246,16 +308,16 @@ Herunder er der nogle eksempler på hvordan matematikken kan se ud og
 hvordan det skrives.
 Først idiot formlen.
 %
-\begin{align*}
+\begin{align}
 1
 	& = \sin(x)^2 + \cos(x)^2 
-\end{align*}
+\end{align}
 %
 \begin{lstlisting}
-\begin{align*}
+\begin{align}
 1
 	& = \sin(x)^2 + \cos(x)^2 
-\end{align*}
+\end{align}
 \end{lstlisting}
 %
 Så Schrödinger ligningen i et endimensionelt system 
@@ -281,7 +343,6 @@ betyder, kan det gøres med
 \verb!\underbrace{formel del}_{forklaring}! kommandoen.
 %
 \begin{align}
-\nonumber
 \underbrace{\left(\underbrace{\frac{-\hbar^2}{2m} 
 		\frac{\partial^2}{\partial x^2}}_{\textrm{Kinetisk energi}} 
 		+ \underbrace{V(x)}_{\textrm{Potentiel energi}}
@@ -292,7 +353,6 @@ betyder, kan det gøres med
 %
 \begin{lstlisting}
 \begin{align}
-\nonumber
 \underbrace{\left(\underbrace{\frac{-\hbar^2}{2m} 
 		\frac{\partial^2}{\partial x^2}}_{\textrm{Kinetisk energi}} 
 		+ \underbrace{V(x)}_{\textrm{Potentiel energi}}
