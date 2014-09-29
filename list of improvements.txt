@@ -1,0 +1,17 @@
+2014-09-26 Latex kursus for ida
+Nye slides
+* Bedre / større eksempel med input / include (includeonly)
+* Slide omkring betydningen af tomme linjer og afsnit i latex
+
+Andre kommentarer
+* Der var noget forvirring mellem miktex og texworks. Mange prøvede at installere texworks separat
+* texworks var ikke med i mactex
+* problemer med at utf8 ikke var sat som standard fil encodning i texshop (kan rettes i indstillingerne)
+
+2014
+Incorporate exercises from these three slide sets
+https://www.writelatex.com/blog/7-free-online-introduction-to-latex-course-part-1#.U3ybNx_64wx
+https://www.writelatex.com/blog/9-free-online-introduction-to-latex-course-part-2#.U3yckB_64ww
+https://www.writelatex.com/blog/18#.U3yckh_64ww
+De er allerede indskrevet under exercises/exercise1.tex
+
