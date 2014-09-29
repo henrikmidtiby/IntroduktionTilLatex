@@ -454,6 +454,41 @@ a^b
 	\end{verbatim}
 \end{frame}
 
+\begin{frame}[fragile]
+	\frametitle{Matematik tilstand}
+	
+	Latex kan kun skrive formler når den er i en matematik
+	tilstand. Der findes to forskellige matematik tilstande
+
+	\begin{description}
+	\item[inline] til matematik inde i en tekst, \\ afgrænses af \$ \ldots \$
+	\item[display] til matematik på en linje for sig selv, \\ afgrænses af \verb!\begin{align}! og \verb!\end{align}!
+	\end{description}
+\end{frame}
+
+
+\begin{frame}[fragile]
+	\frametitle{Matematik tilstand (2)}
+	\begin{verbatim}
+	Noget tekst $\frac{a}{b}$ og noget mere matematik
+	\begin{align}
+		a^b
+	\end{align}
+	\begin{align*}
+		\theta
+	\end{align*}
+	\end{verbatim}
+	
+	Noget tekst $\frac{a}{b}$ og noget mere matematik
+	\begin{align}
+		a^b
+	\end{align}
+	\begin{align*}
+		\theta
+	\end{align*}
+\end{frame}
+
+
 
 \frame {
 	\frametitle{Formler I}
