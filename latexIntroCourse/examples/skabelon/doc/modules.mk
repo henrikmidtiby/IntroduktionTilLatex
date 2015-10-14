@@ -4,7 +4,6 @@ RERUNCONDITION := "(There were undefined references|Rerun to get (cross-referenc
 
 DEPENDENCIES += \
 	doc/var/citations.bib \
-	doc/template.sty \
 
 SRC += \
 	doc/${PROJEKTNAVN}.tex

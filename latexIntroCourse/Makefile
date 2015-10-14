@@ -47,6 +47,7 @@ DEPENDENCIES := \
 	examples/11.pdf \
 	examples/12.pdf \
 	examples/13mhchem.pdf \
+	examples/13mhchemReactions.pdf \
 	examples/14siunitx.pdf \
 	examples/15hyperref.pdf \
 	examples/16include.pdf \
