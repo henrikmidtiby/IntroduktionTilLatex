@@ -1,0 +1,3 @@
+[submodule "TeXworks-scripts"]
+	path = TeXworks-scripts
+	url = ./TeXworks-scripts/
