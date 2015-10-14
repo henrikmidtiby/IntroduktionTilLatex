@@ -15,3 +15,8 @@ https://www.writelatex.com/blog/9-free-online-introduction-to-latex-course-part-
 https://www.writelatex.com/blog/18#.U3yckh_64ww
 De er allerede indskrevet under exercises/exercise1.tex
 
+
+Todos:
+* Forsimple skabelonen så den afhænger af færre pakker
+* Option clash fejl eksempel
+* Pakke dokumentation vise eksempler

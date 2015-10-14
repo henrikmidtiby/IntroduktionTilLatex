@@ -79,6 +79,8 @@
 .3 test001.tex.
 .3 test002.tex.
 .3 ....
+.2 TeXworks-scripts.
+.3 ....
 }
 }
 
@@ -167,7 +169,7 @@
 \frame
 {
 	\frametitle{Hvilke programmer skal jeg bruge?}
-	Oversættere (oversætter et latex dokument til f.eks. en pdf fil)
+	Oversættere (oversætter et latex dokument til en pdf fil)
 	\begin{itemize}
 		\item MiKTeX, \\
 			{\tiny \url{http://miktex.org/2.9/setup}}
@@ -189,12 +191,19 @@
 \frame
 {
 	\frametitle{Ekstra scripts til TeXworks}
-
+		
 	\begin{itemize}
-	\item Hjælp til at finde fejl i latex dokumenter \\
-		{\tiny \url{https://github.com/henrikmidtiby/TeXworks-scripts/tree/master/latexErrors}}
-	\item Autocompletion \\
-		{\tiny \url{https://github.com/henrikmidtiby/TeXworks-scripts/tree/master/autocomplete}}
+	\item Ligger i TeXworks-scripts mappen
+	\item Indholdet flyttes over i den mappe som åbnes via 
+		\begin{itemize}
+		\item Scripts 
+		\item Scripting TeXworks 
+		\item Show Scripts Folder
+		\end{itemize}
+	\item LogParser
+	\item Autocomplete
+	\item Alternativ download lokation \\
+		{\tiny \url{https://github.com/henrikmidtiby/TeXworks-scripts}}
 	\end{itemize}
 }
 
@@ -204,6 +213,12 @@
 {
 \frametitle{TeXworks}
 	\includegraphics[height=6cm]{pic/texworksLatexErrors.png}
+}
+
+\frame
+{
+\frametitle{Warnings og Errors}
+	Det er en god ide at slippe af med \emph{alle} errors og warnings.
 }
 
 % ================================================================
@@ -637,6 +652,12 @@ a^b
 	\source{Efter figur 12.1 i Latex Companion.}
 }
 
+\frame
+{
+	\frametitle{latexmk}
+	
+	{\tiny \url{https://github.com/TeXworks/texworks/wiki/AdvancedTypesettingTools}}
+}
 
 \frame
 {
