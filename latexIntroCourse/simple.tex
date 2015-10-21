@@ -200,12 +200,47 @@
 		\item Scripting TeXworks 
 		\item Show Scripts Folder
 		\end{itemize}
-	\item LogParser
-	\item Autocomplete
 	\item Alternativ download lokation \\
 		{\tiny \url{https://github.com/henrikmidtiby/TeXworks-scripts}}
 	\end{itemize}
 }
+
+\begin{frame}
+\frametitle{Script -- LogParser}
+
+\includegraphics[width=6cm]{pic/texworksConsoleOutput.png}
+
+Standard visning af fejl i console output.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Script -- LogParser}
+
+\includegraphics[width=6cm]{pic/texworksLogParser.png}
+
+Visning af fejl med log parser scriptet.
+
+Opsummeringen vises først når oversætteren er \emph{færdig}.
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Script -- Autocomplete}
+
+Scriptet aktiveres ved genvejen \verb!crtl + m!.
+
+Scriptet kan hjælpe med at autocomplete ting som 
+\begin{itemize}
+\item	kommandoer
+\item	miljøer (figure, itemize, enumerate, \ldots)
+\item	referencer (ref, label)
+\item	citationer (cite)
+\item 	\ldots
+\end{itemize}
+
+\end{frame}
 
 
 % ================================================================
@@ -231,7 +266,7 @@
 }
 
 % ================================================================
-\subsection{Minimalt eksempel}
+\subsection{Hello world}
 \frame
 {
 	\frametitle{Minimalt eksempel}
@@ -244,8 +279,6 @@
 }
 
 
-% ================================================================
-\subsection{Danske tegn}
 \begin{frame}[fragile]
 	\frametitle{Danske tegn -- Problemer}
 
@@ -395,8 +428,6 @@ På Ærø ligger Marstal.
 	\insertPDF{examples/04.pdf}
 }
 
-% ================================================================
-\subsection{Lister i lister}
 \frame {
 	\frametitle{Lister i lister}
 	\lstinputlisting[firstline=5, lastline=13]{examples/04b.tex}
@@ -407,7 +438,7 @@ På Ærø ligger Marstal.
 }
 
 % ================================================================
-\subsection{Tabeller}
+\subsection{Tabeller og figurer}
 \frame {
 	\frametitle{Tabeller}
 	\lstinputlisting[firstline=2, lastline=2, basicstyle=\color{red}]{examples/10.tex}
@@ -428,8 +459,6 @@ På Ærø ligger Marstal.
 }
 
 
-% ================================================================
-\subsection{Figurer}
 \frame {
 	\frametitle{Figurer}
 	\lstinputlisting[firstline=2, lastline=3, basicstyle=\color{red}]{examples/06.tex}
@@ -456,9 +485,26 @@ På Ærø ligger Marstal.
 
 }
 
+\begin{frame}[fragile]
+\frametitle{Pakker i \LaTeX}
+	
+Pakker kan hentes fra CTAN: Comprehensive TeX Archive Network (\url{https://www.ctan.org/}).
+
+Et eksempel på en pakke er \verb!graphicx!, der gør det muligt at indsætte billeder
+i \LaTeX dokumenter.
+
+I kan finde pakken på ctan på nedenstående adresse og finde 
+dokumentation til pakken samme sted.
+
+\source{\url{https://www.ctan.org/pkg/graphicx}}
+\end{frame}
+
+
+
+
 
 % ================================================================
-\subsection{Formler}
+\subsection{Matematik}
 \begin{frame}[fragile]
 	\frametitle{Formler 0}
 	{\Huge
@@ -482,7 +528,7 @@ a^b
 
 	\begin{description}
 	\item[inline] til matematik inde i en tekst, \\ afgrænses af \$ \ldots \$
-	\item[display] til matematik på en linje for sig selv, \\ afgrænses af \verb!\begin{align}! og \verb!\end{align}!
+	\item[display] til matematik på en linje for sig selv, \\ afgrænses af \verb!\begin{align}! og \verb!\end{align}! 
 	\end{description}
 \end{frame}
 
@@ -550,6 +596,25 @@ a^b
 
 
 \frame {
+	\frametitle{Lidt mere matematik}
+	
+	Er der behov for at skrive mere matematik kan 
+	\emph{The short math guide for \LaTeX } af Michael Downes, 
+	American Mathematical Society anbefales.
+	
+	\source{\url{ftp://ftp.ams.org/pub/tex/doc/amsmath/short-math-guide.pdf}}
+}
+
+\begin{frame}[fragile]
+	\frametitle{Align miljøet}
+	
+	Align miljøet fra pakken \verb!amsmath! kan bruges til at 
+	sætte flere ligninger op under hinanden, så de f.eks. alle har lighedstegnet
+	det samme sted.
+\end{frame}
+
+
+\frame {
 	\frametitle{Formler II}
 	\lstinputlisting{examples/07.tex}
 }
@@ -604,7 +669,7 @@ a^b
 }
 
 % ================================================================
-\subsection{Cite and bibitem}
+\subsection{Citationer}
 \frame {
 	\frametitle{Cite and bibitem}
 	\lstinputlisting[firstline=4, lastline=20]{examples/08.tex}
@@ -620,9 +685,6 @@ a^b
 
 %}
 
-
-% ================================================================
-\subsection{Bibtex}
 
 
 \frame {
@@ -656,7 +718,12 @@ a^b
 {
 	\frametitle{latexmk}
 	
-	{\tiny \url{https://github.com/TeXworks/texworks/wiki/AdvancedTypesettingTools}}
+	latexmk er et lille program / perl script der sørger for at 
+	køre pdflatex, bibtex med mere det antal gange der er 
+	nødvendigt for at dokumentet ser rigtigt ud.
+
+	Installationsvejledning til latexmk på windows \\
+	{\tiny\url{http://tex.stackexchange.com/a/149861/1366}}
 }
 
 \frame
@@ -695,7 +762,7 @@ a^b
 
 
 % ================================================================
-\subsection{Tikz}
+\subsection{Forskelligt}
 
 \frame {
 	\frametitle{Tikz}
@@ -706,10 +773,6 @@ a^b
 \frame {
 	\insertPDF[0.6]{examples/12.pdf}
 }
-
-
-% ================================================================
-\subsection{mhchem}
 
 \frame {
 	\frametitle{mhchem (1/2)}
@@ -729,9 +792,6 @@ a^b
 \frame {
 	\insertPDF[0.6]{examples/13mhchemReactions.pdf}
 }
-
-% ================================================================
-\subsection{siunitx}
 
 \frame {
 	\frametitle{siunitx}
@@ -782,7 +842,7 @@ a^b
 
 % ================================================================
 % ================================================================
-\section{En rapport skabelon}
+\section{Skabelon}
 \frame{
 \begin{multicols}{2}
 	\tableofcontents[currentsection] 
@@ -807,9 +867,11 @@ a^b
 
 % ================================================================
 % ================================================================
-\section{Ressourcer / Læsestof}
+\section{Ressourcer}
 \frame {
 	\begin{itemize}
+	\item 	\LaTeX fortsætter kursus \\
+			{\tiny \url{http://henrikmidtiby.github.io/downloads/LatexContinued.zip}}
 	\item	The not so short introduction to latex 	\\
 			{\tiny \url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}}
 	\item	Introduktion til \LaTeX 				\\
