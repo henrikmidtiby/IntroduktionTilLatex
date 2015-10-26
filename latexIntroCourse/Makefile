@@ -39,6 +39,7 @@ DEPENDENCIES := \
 	examples/04b.pdf \
 	examples/05.pdf \
 	examples/06.pdf \
+	examples/06figureplacements.pdf \
 	examples/07a.pdf \
 	examples/07.pdf \
 	examples/08.pdf \
@@ -132,6 +133,10 @@ examples/06.pdf: \
 	examples/06.tex
 	cd examples && pdflatex 06.tex
 	cd examples && pdflatex 06.tex
+
+examples/06figureplacements.pdf: \
+	examples/06figureplacements.tex
+	cd examples && pdflatex 06figureplacements.tex
 
 examples/07a.pdf: \
 	examples/07a.tex
