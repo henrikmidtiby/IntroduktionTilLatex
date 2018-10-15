@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage[colorlinks, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+\title{Installation af \LaTeX}
+\author{Henrik Skov Midtiby}
+
+\begin{document}
+\maketitle
+
+Dette dokument beskriver hvordan man installerer \LaTeX{} og 
+efterfølgende tjekker at det virker.
+\LaTeX{} virker på alle operativsystemer, men installationsprocessen
+er noget forskellig mellem de enkelte operativsystemer.
+Processen er beskrevet i afsnit \ref{secInstallation} og 
+det efterfølgende tjek af installationen er beskrevet i 
+afsnit \ref{secTjekAfAtInstallationenVirker}.
+
+
+\section{Installation}
+\label{secInstallation}
+
+
+
+\subsection{Windows}
+
+Følg nedenstående skridt:
+\begin{enumerate}
+\item	Gå ind på \url{http://miktex.org/download}
+\item	Download \emph{Basic MiKTeX installer (Windows 32-bit)}, downloaden fylder ca. 180MB.
+\item	Kør installationsprogrammet
+\end{enumerate}
+
+
+
+\subsection{Mac}
+
+Følg nedenstående skridt:
+\begin{enumerate}
+\item	Gå ind på \url{https://tug.org/mactex/mactex-download.html}
+\item	Download \emph{MacTeX.pkg}, filen fylder ca. 2.5GB.
+\item	Dobbeltklik på den hentede fil og installationen starter.
+\end{enumerate}
+
+
+
+\subsection{Linux}
+
+Skriv følgende i en terminal
+\begin{verbatim}
+sudo apt-get install texlive
+\end{verbatim}
+
+\section{Tjek af at installationen virker}
+\label{secTjekAfAtInstallationenVirker}
+
+Følg følgende skridt:
+\begin{enumerate}
+\item	Start programmet TeXworks
+\item	I et nyt dokument indskriv følgende linjer
+\begin{verbatim}
+\documentclass{article}
+\begin{document}
+\section{Hello world!}
+\end{document}
+\end{verbatim}
+\item	Gem filen som ``test.tex'' i en ny mappe.
+\item	Oversæt dokumentet med pdflatex ved at trykke på den grønne knap
+		øverst til venstre.
+\item	TeXworks vil nu åbne et nyt vindue, i hvilket teksten 
+		``1 Hello world!'' vises.
+\end{enumerate}
+
+
+\end{document}
