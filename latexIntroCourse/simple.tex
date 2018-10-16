@@ -501,7 +501,17 @@ dokumentation til pakken samme sted.
 \begin{frame}[fragile]
 \frametitle{Placering af figurer og tabeller}
 
-\lstinputlisting[firstline=5, lastline=17]{examples/06figureplacements.tex}
+\lstinputlisting[firstline=5, lastline=21]{examples/06figureplacementsdefault.tex}
+\end{frame}
+
+\begin{frame}
+\insertPDF{examples/06figureplacementsdefault.pdf}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Placering af figurer og tabeller}
+
+\lstinputlisting[firstline=5, lastline=21]{examples/06figureplacements.tex}
 \end{frame}
 
 \begin{frame}
@@ -705,21 +715,21 @@ a^b
 
 
 \frame {
-	\frametitle{Bibtex I}
-	\lstinputlisting{examples/09.tex}
+	\frametitle{biblatex I}
+	\lstinputlisting{examples/09biblatex.tex}
 }
 
 \frame {
-	\frametitle{Bibtex II (bibtexfile.bib)}
+	\frametitle{biblatex II (bibtexfile.bib)}
 	\lstinputlisting{examples/bibtexfile.bib}
 }
 
 \frame {
-	\insertPDF{examples/09firstRun.pdf}
+	\insertPDF{examples/09biblatexfirstRun.pdf}
 }
 
 \frame {
-	\insertPDF{examples/09.pdf}
+	\insertPDF{examples/09biblatex.pdf}
 }
 
 
@@ -826,16 +836,26 @@ a^b
 
 \frame {
 	\frametitle{hyperref}
-	\lstinputlisting[firstline=2, lastline=3, basicstyle=\color{red}\footnotesize]{examples/15hyperref.tex}
-	\lstinputlisting[firstline=5, lastline=14, basicstyle=\footnotesize]{examples/15hyperref.tex}
-}
-
-\frame {
-	\insertPDF[0.6]{examples/15hyperreffirstRun.pdf}
+	\lstinputlisting[firstline=2, lastline=4, basicstyle=\color{red}\footnotesize]{examples/15hyperref.tex}
+	\lstinputlisting[firstline=10, lastline=21, basicstyle=\footnotesize]{examples/15hyperref.tex}
 }
 
 \frame {
 	\insertPDF[0.6]{examples/15hyperref.pdf}
+}
+
+
+% ================================================================
+\subsection{caption}
+
+\frame {
+	\frametitle{caption -- Tilpasse udseende af figurtekster}
+	\lstinputlisting[firstline=2, lastline=2, basicstyle=\color{red}\footnotesize]{examples/18adjustcaptions.tex}
+	\lstinputlisting[firstline=5, lastline=13, basicstyle=\footnotesize]{examples/18adjustcaptions.tex}
+}
+
+\frame {
+	\insertPDF[0.6]{examples/18adjustcaptions.pdf}
 }
 
 

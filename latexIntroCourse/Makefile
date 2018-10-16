@@ -39,11 +39,13 @@ DEPENDENCIES := \
 	examples/04b.pdf \
 	examples/05.pdf \
 	examples/06.pdf \
+	examples/06figureplacementsdefault.pdf \
 	examples/06figureplacements.pdf \
 	examples/07a.pdf \
 	examples/07.pdf \
 	examples/08.pdf \
 	examples/09.pdf \
+	examples/09biblatex.pdf \
 	examples/10.pdf \
 	examples/11.pdf \
 	examples/12.pdf \
@@ -52,6 +54,7 @@ DEPENDENCIES := \
 	examples/14siunitx.pdf \
 	examples/15hyperref.pdf \
 	examples/16include.pdf \
+	examples/18adjustcaptions.pdf \
 	examples/skabelon/doc/project.pdf \
 
 ${PROJEKTNAVN}.pdf: \
@@ -134,6 +137,10 @@ examples/06.pdf: \
 	cd examples && pdflatex 06.tex
 	cd examples && pdflatex 06.tex
 
+examples/06figureplacementsdefault.pdf: \
+	examples/06figureplacementsdefault.tex
+	cd examples && pdflatex 06figureplacementsdefault.tex
+
 examples/06figureplacements.pdf: \
 	examples/06figureplacements.tex
 	cd examples && pdflatex 06figureplacements.tex
@@ -165,6 +172,18 @@ examples/09.pdf: \
 	cd examples && bibtex 09
 	cd examples && pdflatex 09.tex
 	cd examples && pdflatex 09.tex
+
+examples/09biblatex.pdf: \
+	examples/09biblatex.tex
+	rm -f examples/09biblatex.aux
+	rm -f examples/09biblatex.bbl
+	rm -f examples/09biblatex.bcf
+	rm -f examples/09biblatex.blg
+	cd examples && pdflatex 09biblatex.tex
+	cp examples/09biblatex.pdf examples/09biblatexfirstRun.pdf
+	cd examples && biber 09biblatex
+	cd examples && pdflatex 09biblatex.tex
+	cd examples && pdflatex 09biblatex.tex
 
 examples/10.pdf: \
 	examples/10.tex
@@ -199,9 +218,14 @@ examples/15hyperref.pdf: \
 	rm examples/15hyperref.aux
 	cd examples && pdflatex 15hyperref.tex
 	cp examples/15hyperref.pdf examples/15hyperreffirstRun.pdf
+	cd examples && biber 15hyperref
 	cd examples && pdflatex 15hyperref.tex
 
 examples/16include.pdf: \
 	examples/16include.tex
 	cd examples && pdflatex 16include.tex
+
+examples/18adjustcaptions.pdf: \
+	examples/18adjustcaptions.tex
+	cd examples && pdflatex 18adjustcaptions.tex
 
