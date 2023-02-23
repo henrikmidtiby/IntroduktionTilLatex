@@ -53,9 +53,9 @@
 \begin{itemize}
 \item Afprøve om der er internet adgang
 \item Hente præsentationen, \\
-	{\tiny \url{http://henrikmidtiby.github.io/presentations/}}
-\item Hente og installere tinytex, \\
-	{\tiny \url{https://yihui.name/tinytex/}}
+	{\small \url{http://henrikmidtiby.github.io/presentations/}}
+\item Logge ind på OverLeaf, \\
+	{\small \url{https://www.overleaf.com}}
 \end{itemize}
 }
 
@@ -164,97 +164,23 @@
 \subsection{Programmer}
 \frame
 {
-	\frametitle{Hvilke programmer skal jeg bruge?}
-	Oversættere (oversætter et latex dokument til en pdf fil)
-	\begin{itemize}
-		\item Hente og installere tinytex, \\
-			{\tiny \url{https://yihui.name/tinytex/}}
-	\end{itemize}
-
-	Editorer (det program du bruger til at rette i latex dokumenter)
-	\begin{itemize}
-		\item	TeXworks, \\
-			{\tiny \url{http://www.tug.org/texworks/}}
-		\item	TexnicCenter, \\
-			{\tiny \url{http://www.texniccenter.org/}}
-		\item 	Texmaker, \\
-			{\tiny \url{http://www.xm1math.net/texmaker/}}
-	\end{itemize}
-}
-
-
-\frame
-{
-	\frametitle{Online alternativer}
+	\frametitle{Online latex editor}
 
 	Online platform til LaTeX, der understøtter at flere retter i samme dokument på en gang.
 
 	\url{https://www.overleaf.com/}
 }
 
-% ================================================================
-%\subsection{Ekstra scripts til TeXworks}
-\frame
-{
-	\frametitle{Ekstra scripts til TeXworks}
-		
-	\begin{itemize}
-	\item Ligger i TeXworks-scripts mappen
-	\item Indholdet flyttes over i den mappe som åbnes via 
-		\begin{itemize}
-		\item Scripts 
-		\item Scripting TeXworks 
-		\item Show Scripts Folder
-		\end{itemize}
-	\item Alternativ download lokation \\
-		{\tiny \url{https://github.com/henrikmidtiby/TeXworks-scripts}}
-	\end{itemize}
-}
-
-\begin{frame}
-\frametitle{Script -- LogParser}
-
-\includegraphics[width=6cm]{pic/texworksConsoleOutput.png}
-
-Standard visning af fejl i console output.
-
-\end{frame}
-
-\begin{frame}
-\frametitle{Script -- LogParser}
-
-\includegraphics[width=6cm]{pic/texworksLogParser.png}
-
-Visning af fejl med log parser scriptet.
-
-Opsummeringen vises først når oversætteren er \emph{færdig}.
-
-\end{frame}
 
 
-\begin{frame}[fragile]
-\frametitle{Script -- Autocomplete}
-
-Scriptet aktiveres ved genvejen \verb!crtl + m!.
-
-Scriptet kan hjælpe med at autocomplete ting som 
-\begin{itemize}
-\item	kommandoer
-\item	miljøer (figure, itemize, enumerate, \ldots)
-\item	referencer (ref, label)
-\item	citationer (cite)
-\item 	\ldots
-\end{itemize}
-
-\end{frame}
 
 
 % ================================================================
-\frame
-{
-\frametitle{TeXworks}
-	\includegraphics[height=6cm]{pic/texworksLatexErrors.png}
-}
+%\frame
+%{
+%\frametitle{TeXworks}
+%	\includegraphics[height=6cm]{pic/texworksLatexErrors.png}
+%}
 
 \frame
 {
@@ -273,20 +199,8 @@ Scriptet kan hjælpe med at autocomplete ting som
 
 % ================================================================
 \subsection{Hello world}
-\frame
-{
-	\frametitle{Minimalt eksempel}
-	\lstinputlisting{examples/01.tex}
-}
-
-\frame
-{
-	\insertPDF{examples/01.pdf}
-}
-
-
 \begin{frame}[fragile]
-	\frametitle{Danske tegn -- Problemer}
+	\frametitle{Minimalt eksempel}
 
 \begin{verbatim}
 \documentclass{article}
@@ -302,29 +216,6 @@ På Ærø ligger Marstal.
 {
 	\insertPDF{examples/01b.pdf}
 }
-
-
-\begin{frame}[fragile]
-	\frametitle{Danske tegn -- Problemet løst}
-
-\begin{verbatim}
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\begin{document}
-Hello world!
-
-På Ærø ligger Marstal.
-\end{document}
-\end{verbatim}
-
-\end{frame}
-\frame
-{
-	\insertPDF{examples/01c.pdf}
-}
-
-
-
 
 
 
@@ -626,17 +517,6 @@ a^b
 	\includegraphics[width=7cm]{pic/detexify.png}
 }
 
-\frame {
-	\frametitle{Tegn formlerne!}
-
-	\begin{itemize}
-	\item MyScript MathPad, \\
-			{\tiny \url{https://itunes.apple.com/app/myscript-mathpad/id674996719}}
-	\end{itemize}
-	
-	\centering	
-	\includegraphics[width=7cm]{pic/myscriptmathpad.jpg}
-}
 
 
 \frame {
@@ -982,6 +862,92 @@ a^b
 	Hvis latex kompileringen fejler kan problemet nogle gange løses ved at slette
 	alle \emph{.aux} filer.
 }
+
+
+\frame{
+	\frametitle{Tak for nu}
+}
+
+
+
+% ================================================================
+\frame
+{
+	\frametitle{Hvilke programmer skal jeg bruge?}
+	Oversættere (oversætter et latex dokument til en pdf fil)
+	\begin{itemize}
+		\item Hente og installere tinytex, \\
+			{\tiny \url{https://yihui.name/tinytex/}}
+	\end{itemize}
+
+	Editorer (det program du bruger til at rette i latex dokumenter)
+	\begin{itemize}
+		\item	TeXworks, \\
+			{\tiny \url{http://www.tug.org/texworks/}}
+		\item	TexnicCenter, \\
+			{\tiny \url{http://www.texniccenter.org/}}
+		\item 	Texmaker, \\
+			{\tiny \url{http://www.xm1math.net/texmaker/}}
+	\end{itemize}
+}
+
+
+
+% ================================================================
+%\subsection{Ekstra scripts til TeXworks}
+\frame
+{
+	\frametitle{Ekstra scripts til TeXworks}
+		
+	\begin{itemize}
+	\item Ligger i TeXworks-scripts mappen
+	\item Indholdet flyttes over i den mappe som åbnes via 
+		\begin{itemize}
+		\item Scripts 
+		\item Scripting TeXworks 
+		\item Show Scripts Folder
+		\end{itemize}
+	\item Alternativ download lokation \\
+		{\tiny \url{https://github.com/henrikmidtiby/TeXworks-scripts}}
+	\end{itemize}
+}
+
+\begin{frame}
+\frametitle{Script -- LogParser}
+
+\includegraphics[width=6cm]{pic/texworksConsoleOutput.png}
+
+Standard visning af fejl i console output.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Script -- LogParser}
+
+\includegraphics[width=6cm]{pic/texworksLogParser.png}
+
+Visning af fejl med log parser scriptet.
+
+Opsummeringen vises først når oversætteren er \emph{færdig}.
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{Script -- Autocomplete}
+
+Scriptet aktiveres ved genvejen \verb!crtl + m!.
+
+Scriptet kan hjælpe med at autocomplete ting som 
+\begin{itemize}
+\item	kommandoer
+\item	miljøer (figure, itemize, enumerate, \ldots)
+\item	referencer (ref, label)
+\item	citationer (cite)
+\item 	\ldots
+\end{itemize}
+
+\end{frame}
 
 
 \end{document}
